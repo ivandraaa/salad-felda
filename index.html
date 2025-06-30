@@ -159,11 +159,14 @@
           Daftar sekarang dan nikmati berbagai promo menarik dari Salad Felda.
         </p>
         <div class="newsletter-form">
-          <input
-            type="email"
-            id="newsletterEmail"
-            placeholder="Masukkan email Anda"
-          />
+          <div class="newsletter-input-group">
+            <input
+              type="email"
+              id="newsletterEmail"
+              placeholder="Masukkan email Anda"
+            />
+            <small id="emailError">Email tidak valid</small>
+          </div>
           <button id="newsletterButton">Daftar</button>
         </div>
 
@@ -176,18 +179,6 @@
               Terima kasih telah bergabung sebagai member Salad Felda. Pelanggan
               dipastikan untuk memeriksa email secara berkala untuk menikmati
               berbagai promo menarik.
-            </p>
-          </div>
-        </div>
-
-        <!-- Modal Gagal -->
-        <div id="errorModal" class="modal">
-          <div class="modal-content error">
-            <span class="close-modal">&times;</span>
-            <h3>Email Tidak Valid</h3>
-            <p>
-              Mohon masukkan alamat email yang benar agar kami dapat mengirimkan
-              konfirmasi pendaftaran.
             </p>
           </div>
         </div>

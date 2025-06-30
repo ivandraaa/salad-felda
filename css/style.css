@@ -389,14 +389,17 @@ nav {
   padding: 2rem 2rem 2rem;
   text-align: center;
 }
+
 .newsletter h2 {
   font-size: 1.6rem;
 }
+
 .newsletter p {
   margin: 1rem auto;
   max-width: 500px;
   color: #555;
 }
+
 .newsletter-form {
   margin-top: 1.5rem;
   display: flex;
@@ -404,12 +407,50 @@ nav {
   gap: 1rem;
   flex-wrap: wrap;
 }
+
+.newsletter-input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 500px;
+}
+
+#newsletterEmail {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+#emailError {
+  color: red;
+  display: none;
+  margin-top: 4px;
+  font-size: 14px;
+  text-align: left;
+}
+
+#newsletterButton {
+  padding: 10px 20px;
+  background-color: #1e7e34;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
 .newsletter-form input {
   padding: 0.75rem 1rem;
   border-radius: 6px;
   border: 1px solid #ccc;
-  min-width: 250px;
+  min-width: 350px;
+  width: 100%;
+  box-sizing: border-box;
 }
+
 .newsletter-form button {
   background: #098f36;
   color: white;
@@ -417,8 +458,11 @@ nav {
   padding: 0.75rem 1.2rem;
   border-radius: 6px;
   cursor: pointer;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 /* Modal Newsletter */
 .modal {
   display: none;

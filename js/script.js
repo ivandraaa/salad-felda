@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const successModal = document.getElementById("successModal");
   const errorModal = document.getElementById("errorModal");
   const closeButtons = document.querySelectorAll(".close-modal");
+  const emailError = document.getElementById("emailError");
 
   if (newsletterButton && newsletterEmail) {
     newsletterButton.addEventListener("click", function (event) {
@@ -75,8 +76,9 @@ document.addEventListener("DOMContentLoaded", function () {
       if (email.includes("@")) {
         showModal(successModal);
         newsletterEmail.value = "";
+        emailError.style.display = "none"; // sembunyikan pesan error
       } else {
-        showModal(errorModal);
+        emailError.style.display = "block"; // tampilkan pesan error
       }
     });
   }
