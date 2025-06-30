@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salad Felda - Beranda</title>
+    <link rel="icon" href="images/logo.png" type="image/png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ==============================
+       NAVIGASI UTAMA
+  =================================== -->
+    <nav>
+      <div class="nav-left">Salad Felda</div>
+      <div class="nav-right">
+        <a href="index.html" class="active">Beranda</a>
+        <a href="menu.html">Menu Salad</a>
+        <a href="order.html">Pesan Sekarang</a>
+        <button id="galleryBtn" class="nav-gallery-btn">
+          Galeri <span id="galleryArrow">▼</span>
+        </button>
+        <a href="about.html">Tentang Kami</a>
+      </div>
+    </nav>
+
+    <!-- ==============================
+       MODAL DROPDOWN GALERI
+  =================================== -->
+    <div class="gallery-modal" id="galleryModal">
+      <div class="gallery-content">
+        <button class="close-btn" id="closeModal">&times;</button>
+        <div class="modal-links">
+          <div>
+            <h3>Foto Salad</h3>
+            <p>Koleksi gambar salad buah segar kami</p>
+          </div>
+          <div>
+            <h3>Video Proses</h3>
+            <p>Proses pembuatan dan penyajian salad</p>
+          </div>
+          <div>
+            <h3>Testimoni</h3>
+            <p>Ulasan dari pelanggan setia kami</p>
+          </div>
+          <div>
+            <h3>Kemasan</h3>
+            <p>Contoh kemasan salad premium</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <!-- ==============================
+         SECTION HERO (HEADER UTAMA)
+    =================================== -->
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Temukan Salad yang Lezat dan Sehat</h1>
+          <p>
+            Salad Felda menghadirkan cita rasa segar dan sehat yang cocok untuk
+            semua usia.
+          </p>
+          <button class="btn-cta">Pesan Sekarang</button>
+        </div>
+        <div class="hero-img">
+          <img src="images/index/hero-salad.jpg" alt="Ilustrasi Salad" />
+        </div>
+      </section>
+
+      <!-- ==============================
+         SECTION TESTIMONIALS (ULASAN)
+    =================================== -->
+      <section class="testimonials">
+        <h2>Apa Kata Pelanggan Kami</h2>
+        <p>Kepuasan Anda adalah prioritas kami</p>
+        <div class="testimonial-container">
+          <button class="arrow left" onclick="scrollSlider(-1)">
+            &#10094;
+          </button>
+          <div class="testimonial-slider" id="testimonialSlider">
+            <!-- Testimoni 1 -->
+            <div class="testimonial-card">
+              <img src="images/index/user1.png" alt="Andi Saputra" />
+              <h3>Andi Saputra</h3>
+              <p class="role">Desainer</p>
+              <p class="testimonial">
+                "Rasanya segar dan porsinya pas. Saya selalu pesan di sini
+                setiap minggu."
+              </p>
+              <div class="stars">★★★★☆</div>
+            </div>
+            <!-- Testimoni 2 -->
+            <div class="testimonial-card">
+              <img src="images/index/user2.png" alt="Siti Rahma" />
+              <h3>Siti Rahma</h3>
+              <p class="role">Ibu Rumah Tangga</p>
+              <p class="testimonial">
+                "Anak-anak saya suka sekali saladnya, sehat dan lezat!"
+              </p>
+              <div class="stars">★★★★★</div>
+            </div>
+            <!-- Testimoni 3 -->
+            <div class="testimonial-card">
+              <img src="images/index/user3.png" alt="Budi Santoso" />
+              <h3>Budi Santoso</h3>
+              <p class="role">Pengusaha</p>
+              <p class="testimonial">
+                "Pelayanan cepat dan rasa selalu konsisten. Sangat
+                direkomendasikan."
+              </p>
+              <div class="stars">★★★★★</div>
+            </div>
+            <!-- Testimoni 4 -->
+            <div class="testimonial-card">
+              <img src="images/index/user4.png" alt="Rina Wulandari" />
+              <h3>Rina Wulandari</h3>
+              <p class="role">Mahasiswi</p>
+              <p class="testimonial">
+                "Harga terjangkau dan kualitas premium. Favorit saya!"
+              </p>
+              <div class="stars">★★★★☆</div>
+            </div>
+            <!-- Testimoni 5 -->
+            <div class="testimonial-card">
+              <img src="images/index/user5.png" alt="Eka Pratama" />
+              <h3>Eka Pratama</h3>
+              <p class="role">Chef</p>
+              <p class="testimonial">
+                "Kombinasi buah dan sausnya sempurna. Tidak pernah
+                mengecewakan."
+              </p>
+              <div class="stars">★★★★★</div>
+            </div>
+            <!-- Testimoni 6 -->
+            <div class="testimonial-card">
+              <img src="images/index/user6.png" alt="Dewi Anggraini" />
+              <h3>Dewi Anggraini</h3>
+              <p class="role">Guru</p>
+              <p class="testimonial">
+                "Pilihan yang tepat untuk camilan sehat di sela aktivitas."
+              </p>
+              <div class="stars">★★★☆☆</div>
+            </div>
+          </div>
+          <button class="arrow right" onclick="scrollSlider(1)">
+            &#10095;
+          </button>
+        </div>
+      </section>
+
+      <!-- ==============================
+         SECTION NEWSLETTER (PENDAFTARAN)
+    =================================== -->
+      <section class="newsletter">
+        <h2>Bergabung Menjadi Member dan Dapatkan Diskon Hingga 35%</h2>
+        <p>
+          Daftar sekarang dan nikmati berbagai promo menarik dari Salad Felda.
+        </p>
+        <div class="newsletter-form">
+          <input
+            type="email"
+            id="newsletterEmail"
+            placeholder="Masukkan email Anda"
+          />
+          <button id="newsletterButton">Daftar</button>
+        </div>
+
+        <!-- Modal Berhasil -->
+        <div id="successModal" class="modal">
+          <div class="modal-content success">
+            <span class="close-modal">&times;</span>
+            <h3>Pendaftaran Berhasil!</h3>
+            <p>
+              Terima kasih telah bergabung sebagai member Salad Felda. Pelanggan
+              dipastikan untuk memeriksa email secara berkala untuk menikmati
+              berbagai promo menarik.
+            </p>
+          </div>
+        </div>
+
+        <!-- Modal Gagal -->
+        <div id="errorModal" class="modal">
+          <div class="modal-content error">
+            <span class="close-modal">&times;</span>
+            <h3>Email Tidak Valid</h3>
+            <p>
+              Mohon masukkan alamat email yang benar agar kami dapat mengirimkan
+              konfirmasi pendaftaran.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================
+         SECTION FOOTER
+    =================================== -->
+      <footer class="footer-new">
+        <div class="footer-content">
+          <div class="footer-left">
+            <h2>Salad Felda</h2>
+            <p>
+              Misi kami adalah menghadirkan makanan sehat dan menyegarkan untuk
+              semua kalangan.
+            </p>
+            <a
+              href="https://instagram.com/salad_felda"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="images/index/footer-salad.jpg"
+                alt="Instagram"
+                class="footer-social"
+              />
+            </a>
+          </div>
+          <!-- Google Maps Embed -->
+          <div class="footer-map">
+            <iframe
+              src="https://www.google.com/maps?q=-7.597700595855713,110.80908966064453&z=17&hl=id&output=embed"
+              width="100%"
+              height="150"
+              style="border: 0; margin-top: 1rem; border-radius: 8px"
+              allowfullscreen=""
+              loading="lazy"
+            >
+            </iframe>
+          </div>
+          <div class="footer-right">
+            <ul class="footer-nav">
+              <li><a href="index.html" class="active">Beranda</a></li>
+              <li><a href="menu.html">Menu Salad</a></li>
+              <li><a href="order.html">Pesan Sekarang</a></li>
+              <li><a href="#">Galeri</a></li>
+              <li><a href="about.html">Tentang Kami</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 Salad Felda, Hak Cipta Dilindungi</p>
+          <div class="footer-legal">
+            <a href="#">Kebijakan Privasi</a>
+            <span>·</span>
+            <a href="#">Syarat & Ketentuan</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

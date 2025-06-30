@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salad Felda - Pemesanan</title>
+    <link rel="icon" href="images/logo.png" type="image/png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">Salad Felda</div>
+      <div class="nav-right">
+        <a href="index.html">Beranda</a>
+        <a href="menu.html">Menu Salad</a>
+        <a href="order.html" class="active">Pesan Sekarang</a>
+        <button id="galleryBtn" class="nav-gallery-btn">
+          Galeri <span id="galleryArrow">▼</span>
+        </button>
+        <a href="about.html">Tentang Kami</a>
+      </div>
+    </nav>
+
+    <!-- Modal Dropdown Galeri -->
+    <div class="gallery-modal" id="galleryModal">
+      <div class="gallery-content">
+        <button class="close-btn" id="closeModal">&times;</button>
+        <div class="modal-links">
+          <div>
+            <h3>Foto Salad</h3>
+            <p>Koleksi gambar salad buah segar kami</p>
+          </div>
+          <div>
+            <h3>Video Proses</h3>
+            <p>Proses pembuatan dan penyajian</p>
+          </div>
+          <div>
+            <h3>Testimoni</h3>
+            <p>Ulasan dari pelanggan setia</p>
+          </div>
+          <div>
+            <h3>Kemasan</h3>
+            <p>Contoh kemasan salad premium</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <!-- ============================
+       STEP 1: FORM PEMESANAN SALAD
+  ============================ -->
+      <section class="hero-menu-order" id="step-1-section">
+        <div class="form-container">
+          <h1 class="hero-menu-order-title">Form Pemesanan Salad</h1>
+
+          <!-- Step Indicator -->
+          <div class="step-indicator">
+            <div class="step active">1</div>
+            <div class="line"></div>
+            <div class="step">2</div>
+          </div>
+
+          <!-- ============================
+           FORM INPUT USER & SALAD
+      ============================ -->
+          <form id="orderForm">
+            <!-- Nama -->
+            <div class="form-group">
+              <label for="name"
+                >Nama Lengkap <span class="required">*</span></label
+              >
+              <input type="text" id="name" placeholder="Contoh: Siti Aminah" />
+              <p class="error" id="error-name"></p>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="form-group">
+              <label for="whatsapp"
+                >Nomor WhatsApp <span class="required">*</span></label
+              >
+              <input type="text" id="whatsapp" placeholder="08xxxxxxxxxx" />
+              <p class="error" id="error-whatsapp"></p>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="email">Email Aktif</label>
+              <input type="email" id="email" placeholder="email@gmail.com" />
+            </div>
+
+            <!-- Alamat -->
+            <div class="form-group">
+              <label for="address"
+                >Alamat Pengiriman <span class="required">*</span></label
+              >
+              <textarea
+                id="address"
+                placeholder="Contoh: Jl. Mangga No. 12, Jakarta"
+              ></textarea>
+              <p class="error" id="error-address"></p>
+            </div>
+
+            <!-- Salad Pilihan -->
+            <div class="form-group">
+              <label for="salad"
+                >Pilih Salad <span class="required">*</span></label
+              >
+              <select id="salad">
+                <option value="">-- Pilih Salad --</option>
+                <option value="Tropical Mango">Tropical Mango</option>
+                <option value="Berry Bliss">Berry Bliss</option>
+                <option value="Green Detox">Green Detox</option>
+                <option value="Citrus Crunch">Citrus Crunch</option>
+                <option value="Sunrise Papaya">Sunrise Papaya</option>
+                <option value="Avocado Ranch">Avocado Ranch</option>
+                <option value="Classic Caesar">Classic Caesar</option>
+                <option value="Dragonfruit Glow">Dragonfruit Glow</option>
+              </select>
+              <p class="error" id="error-salad"></p>
+            </div>
+
+            <!-- Topping -->
+            <div class="form-group">
+              <label>Pilih Topping Tambahan</label>
+              <div class="checkbox-group">
+                <label><input type="checkbox" /> Keju</label>
+                <label><input type="checkbox" /> Almond</label>
+                <label><input type="checkbox" /> Granola</label>
+                <label><input type="checkbox" /> Madu</label>
+              </div>
+            </div>
+
+            <!-- Catatan -->
+            <div class="form-group">
+              <label for="notes">Catatan Tambahan</label>
+              <textarea
+                id="notes"
+                placeholder="Contoh: Tanpa saus pedas."
+              ></textarea>
+            </div>
+
+            <!-- Tombol Lanjut -->
+            <button type="submit">Lanjutkan</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- ============================
+       STEP 2: DETAIL PEMBAYARAN
+  ============================ -->
+      <section class="hero-menu-order hidden" id="step-2-section">
+        <div class="form-container">
+          <h1 class="hero-menu-order-title">Detail Pesanan</h1>
+
+          <!-- Step Indicator -->
+          <div class="step-indicator">
+            <div class="step active">1</div>
+            <div class="line"></div>
+            <div class="step active">2</div>
+          </div>
+
+          <!-- ============================
+           PREVIEW SALAD YANG DIPILIH
+      ============================ -->
+          <div class="salad-preview-container">
+            <!-- Info Salad -->
+            <div class="salad-info">
+              <h3 id="saladName">Nama Salad</h3>
+              <h4 class="subheading">Isi Salad</h4>
+              <p id="saladDesc">Isi salad akan muncul di sini</p>
+              <h4 class="subheading">Manfaat Salad</h4>
+              <p id="saladBenefits" class="salad-benefits">
+                Manfaat salad akan ditampilkan di sini
+              </p>
+            </div>
+
+            <!-- Gambar Salad -->
+            <div class="salad-image">
+              <img
+                id="saladImage"
+                src="images/menu/menu.jpg"
+                alt="Preview Salad"
+              />
+            </div>
+          </div>
+
+          <hr class="divider-green" />
+
+          <!-- ============================
+           HARGA & METODE PEMBAYARAN
+      ============================ -->
+          <div class="checkout-container">
+            <!-- Detail Harga -->
+            <div class="checkout-info">
+              <h4>Detail Harga</h4>
+              <p>Harga Salad: <strong id="hargaSalad">Rp 45.000</strong></p>
+              <p>Kode Unik: <strong id="kodeUnik">-</strong></p>
+              <p>Total: <strong id="totalHarga">-</strong></p>
+            </div>
+
+            <!-- Metode Pembayaran -->
+            <div class="checkout-payment">
+              <h4>Metode Pembayaran</h4>
+
+              <!-- Radio BCA -->
+              <label class="radio-option">
+                <input type="radio" name="metode" value="BCA" />
+                <span>BCA</span>
+              </label>
+              <div class="rekening-info" id="rekeningBCA" style="display: none">
+                <small>No. Rekening: 1234567890 a.n Salad Sehat</small>
+              </div>
+
+              <!-- Radio BRI -->
+              <label class="radio-option">
+                <input type="radio" name="metode" value="BRI" />
+                <span>BRI</span>
+              </label>
+              <div class="rekening-info" id="rekeningBRI" style="display: none">
+                <small>No. Rekening: 9876543210 a.n Salad Sehat</small>
+              </div>
+
+              <!-- Radio QRIS -->
+              <label class="radio-option">
+                <input type="radio" name="metode" value="QRIS" />
+                <span>QRIS</span>
+              </label>
+              <div class="qris-image" id="qrisImage" style="display: none">
+                <img src="images/order/qris.jpg" alt="QRIS Payment" />
+              </div>
+            </div>
+          </div>
+
+          <hr class="divider-green" />
+
+          <!-- Tombol Navigasi -->
+          <div class="form-actions">
+            <div class="btn-left">
+              <button type="button" class="back-btn" id="kembaliStep1">
+                ← Kembali
+              </button>
+            </div>
+            <div
+              class="btn-right"
+              id="submitButtonContainer"
+              style="display: none"
+            >
+              <button id="btnSudahBayar" type="submit">Sudah Membayar</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================
+       STEP 3: CEK PEMBAYARAN
+  ============================ -->
+      <section class="hero-menu-order hidden" id="step-3-section">
+        <div class="form-container text-center">
+          <h1 class="hero-menu-order-title" id="paymentTitle">
+            Sedang Mengecek Pembayaran...
+          </h1>
+
+          <!-- Loading Animation -->
+          <div class="loading-animation" id="loadingDots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+
+          <!-- Status Info -->
+          <p class="checking-text" id="statusText">
+            Sistem sedang melakukan pengecekan pembayaran Anda.
+          </p>
+          <p class="checking-info" id="checkingInfo">
+            Proses ini dapat memakan waktu hingga <strong>3 menit</strong>.
+          </p>
+
+          <!-- Tombol Selesai -->
+          <div id="doneButtonWrapper" style="display: none; margin-top: 2rem">
+            <a href="index.html" class="btn-done">Tutup & Kembali</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-new">
+      <div class="footer-content">
+        <div class="footer-left">
+          <h2>Salad Felda</h2>
+          <p>
+            Misi kami adalah menghadirkan makanan sehat dan menyegarkan untuk
+            semua kalangan.
+          </p>
+          <a
+            href="https://instagram.com/salad_felda"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="images/index/footer-salad.jpg"
+              alt="Instagram"
+              class="footer-social"
+            />
+          </a>
+        </div>
+        <!-- Google Maps Embed -->
+        <div class="footer-map">
+          <iframe
+            src="https://www.google.com/maps?q=-7.597700595855713,110.80908966064453&z=17&hl=id&output=embed"
+            width="100%"
+            height="150"
+            style="border: 0; margin-top: 1rem; border-radius: 8px"
+            allowfullscreen=""
+            loading="lazy"
+          >
+          </iframe>
+        </div>
+        <div class="footer-right">
+          <ul class="footer-nav">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="menu.html">Menu Salad</a></li>
+            <li><a href="order.html" class="active">Pesan Sekarang</a></li>
+            <li><a href="#">Galeri</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Salad Felda, Hak Cipta Dilindungi</p>
+        <div class="footer-legal">
+          <a href="#">Kebijakan Privasi</a>
+          <span>·</span>
+          <a href="#">Syarat & Ketentuan</a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salad Felda - Menu</title>
+    <link rel="icon" href="images/logo.png" type="image/png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navigasi -->
+    <nav>
+      <div class="nav-left">Salad Felda</div>
+      <div class="nav-right">
+        <a href="index.html">Beranda</a>
+        <a href="menu.html" class="active">Menu Salad</a>
+        <a href="order.html">Pesan Sekarang</a>
+        <button id="galleryBtn" class="nav-gallery-btn">
+          Galeri <span id="galleryArrow">▼</span>
+        </button>
+        <a href="about.html">Tentang Kami</a>
+      </div>
+    </nav>
+
+    <!-- Modal Dropdown Galeri -->
+    <div class="gallery-modal" id="galleryModal">
+      <div class="gallery-content">
+        <button class="close-btn" id="closeModal">&times;</button>
+        <div class="modal-links">
+          <div>
+            <h3>Foto Salad</h3>
+            <p>Koleksi gambar salad buah segar kami</p>
+          </div>
+          <div>
+            <h3>Video Proses</h3>
+            <p>Proses pembuatan dan penyajian</p>
+          </div>
+          <div>
+            <h3>Testimoni</h3>
+            <p>Ulasan dari pelanggan setia</p>
+          </div>
+          <div>
+            <h3>Kemasan</h3>
+            <p>Contoh kemasan salad premium</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <!-- ==============================
+         HERO
+    =================================== -->
+      <section class="hero-menu">
+        <div class="hero-menu-overlay">
+          <h1 class="hero-menu-title">Menu Kami</h1>
+          <p class="hero-menu-desc">
+            Pilihan salad segar yang menyehatkan dan menggugah selera untuk
+            setiap momen Anda.
+          </p>
+        </div>
+      </section>
+
+      <!-- ==============================
+         MENU SALAD
+    =================================== -->
+      <section class="menu-salad-section">
+        <div class="menu-container">
+          <!-- Tropical Mango -->
+          <div class="salad-card">
+            <img src="images/menu/menu.jpg" alt="Tropical Mango" />
+            <h3>Tropical Mango</h3>
+            <p>
+              Romaine, Mangga, Alpukat, Timun, Paprika, Ayam Grilled, Lime
+              Vinaigrette
+            </p>
+
+            <div class="add-control">
+              <button class="add-btn">+ Tambah</button>
+
+              <div class="counter-wrapper hidden">
+                <div class="counter-control">
+                  <button class="counter-btn decrement">−</button>
+                  <span class="counter-number">1</span>
+                  <button class="counter-btn increment">+</button>
+                </div>
+                <a href="order.html" class="order-btn">Pesan Sekarang</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Berry Bliss -->
+          <div class="salad-card">
+            <img src="images/menu/menu.jpg" alt="Berry Bliss" />
+            <h3>Berry Bliss</h3>
+            <p>
+              Strawberry, Blueberry, Bayam Muda, Kacang Almond, Feta Cheese,
+              Raspberry Dressing
+            </p>
+            <div class="add-control">
+              <button class="add-btn">+ Tambah</button>
+              <div class="counter-wrapper hidden">
+                <div class="counter-control">
+                  <button class="counter-btn decrement">−</button>
+                  <span class="counter-number">1</span>
+                  <button class="counter-btn increment">+</button>
+                </div>
+                <a href="order.html" class="order-btn">Pesan Sekarang</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Green Detox -->
+          <div class="salad-card">
+            <img src="images/menu/menu.jpg" alt="Green Detox" />
+            <h3>Green Detox</h3>
+            <p>Kale, Bayam, Edamame, Brokoli, Apel Hijau, Lemon Dressing</p>
+            <div class="add-control">
+              <button class="add-btn">+ Tambah</button>
+              <div class="counter-wrapper hidden">
+                <div class="counter-control">
+                  <button class="counter-btn decrement">−</button>
+                  <span class="counter-number">1</span>
+                  <button class="counter-btn increment">+</button>
+                </div>
+                <a href="order.html" class="order-btn">Pesan Sekarang</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Citrus Crunch -->
+          <div class="salad-card">
+            <img src="images/menu/menu.jpg" alt="Citrus Crunch" />
+            <h3>Citrus Crunch</h3>
+            <p>
+              Iceberg, Jeruk Mandarin, Wortel, Kacang Kenari, Ayam Madu, Sesame
+              Dressing
+            </p>
+            <div class="add-control">
+              <button class="add-btn">+ Tambah</button>
+              <div class="counter-wrapper hidden">
+                <div class="counter-control">
+                  <button class="counter-btn decrement">−</button>
+                  <span class="counter-number">1</span>
+                  <button class="counter-btn increment">+</button>
+                </div>
+                <a href="order.html" class="order-btn">Pesan Sekarang</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sunrise Papaya -->
+          <div class="salad-card">
+            <img src="images/menu/menu.jpg" alt="Sunrise Papaya" />
+            <h3>Sunrise Papaya</h3>
+            <p>Lettuce, Pepaya, Nanas, Timun, Daun Mint, Greek Yogurt Sauce</p>
+            <div class="add-control">
+              <button class="add-btn">+ Tambah</button>
+              <div class="counter-wrapper hidden">
+                <div class="counter-control">
+                  <button class="counter-btn decrement">−</button>
+                  <span class="counter-number">1</span>
+                  <button class="counter-btn increment">+</button>
+                </div>
+                <a href="order.html" class="order-btn">Pesan Sekarang</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Avocado Ranch -->
+          <div class="salad-card">
+            <img src="images/menu/menu.jpg" alt="Avocado Ranch" />
+            <h3>Avocado Ranch</h3>
+            <p>
+              Romaine, Alpukat, Tomat Cherry, Jagung Manis, Ayam Panggang, Ranch
+              Dressing
+            </p>
+            <div class="add-control">
+              <button class="add-btn">+ Tambah</button>
+              <div class="counter-wrapper hidden">
+                <div class="counter-control">
+                  <button class="counter-btn decrement">−</button>
+                  <span class="counter-number">1</span>
+                  <button class="counter-btn increment">+</button>
+                </div>
+                <a href="order.html" class="order-btn">Pesan Sekarang</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Classic Caesar -->
+          <div class="salad-card">
+            <img src="images/menu/menu.jpg" alt="Classic Caesar" />
+            <h3>Classic Caesar</h3>
+            <p>Romaine, Croutons, Parmesan, Caesar Dressing, Chicken Breast</p>
+            <div class="add-control">
+              <button class="add-btn">+ Tambah</button>
+              <div class="counter-wrapper hidden">
+                <div class="counter-control">
+                  <button class="counter-btn decrement">−</button>
+                  <span class="counter-number">1</span>
+                  <button class="counter-btn increment">+</button>
+                </div>
+                <a href="order.html" class="order-btn">Pesan Sekarang</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dragonfruit Glow -->
+          <div class="salad-card">
+            <img src="images/menu/menu.jpg" alt="Dragonfruit Glow" />
+            <h3>Dragonfruit Glow</h3>
+            <p>
+              Mix Lettuce, Dragonfruit, Apel Merah, Biji Chia, Sunflower Seeds,
+              Honey Lime Dressing
+            </p>
+            <div class="add-control">
+              <button class="add-btn">+ Tambah</button>
+              <div class="counter-wrapper hidden">
+                <div class="counter-control">
+                  <button class="counter-btn decrement">−</button>
+                  <span class="counter-number">1</span>
+                  <button class="counter-btn increment">+</button>
+                </div>
+                <a href="order.html" class="order-btn">Pesan Sekarang</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-new">
+      <div class="footer-content">
+        <div class="footer-left">
+          <h2>Salad Felda</h2>
+          <p>
+            Misi kami adalah menghadirkan makanan sehat dan menyegarkan untuk
+            semua kalangan.
+          </p>
+          <a
+            href="https://instagram.com/salad_felda"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="images/index/footer-salad.jpg"
+              alt="Instagram"
+              class="footer-social"
+            />
+          </a>
+        </div>
+        <!-- Google Maps Embed -->
+        <div class="footer-map">
+          <iframe
+            src="https://www.google.com/maps?q=-7.597700595855713,110.80908966064453&z=17&hl=id&output=embed"
+            width="100%"
+            height="150"
+            style="border: 0; margin-top: 1rem; border-radius: 8px"
+            allowfullscreen=""
+            loading="lazy"
+          >
+          </iframe>
+        </div>
+        <div class="footer-right">
+          <ul class="footer-nav">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="menu.html" class="active">Menu Salad</a></li>
+            <li><a href="order.html">Pesan Sekarang</a></li>
+            <li><a href="#">Galeri</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Salad Felda, Hak Cipta Dilindungi</p>
+        <div class="footer-legal">
+          <a href="#">Kebijakan Privasi</a>
+          <span>·</span>
+          <a href="#">Syarat & Ketentuan</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
