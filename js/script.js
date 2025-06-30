@@ -326,6 +326,8 @@ document.addEventListener("DOMContentLoaded", function () {
       step1Lines[0].classList.add("active");
       step2Indicators[1].classList.add("active");
       step2Lines[0].classList.add("active");
+
+      window.scrollTo(0, 0);
     }
   });
 
@@ -340,6 +342,8 @@ document.addEventListener("DOMContentLoaded", function () {
     step1Lines[0].classList.remove("active");
     step2Indicators[1].classList.remove("active");
     step2Lines[0].classList.remove("active");
+
+    window.scrollTo(0, 0);
   });
 
   /* ----------------------------------------
@@ -378,6 +382,8 @@ document.addEventListener("DOMContentLoaded", function () {
   btnSudahBayar.addEventListener("click", () => {
     step2Section.classList.add("hidden");
     step3Section.classList.remove("hidden");
+
+    window.scrollTo(0, 0);
 
     // Simulasi cek pembayaran
     setTimeout(() => {
