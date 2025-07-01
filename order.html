@@ -10,41 +10,29 @@
   <body>
     <nav>
       <div class="nav-left">Salad Felda</div>
-      <div class="nav-right">
+      <div class="nav-right" style="position: relative">
         <a href="index.html">Beranda</a>
         <a href="menu.html">Menu Salad</a>
         <a href="order.html" class="active">Pesan Sekarang</a>
-        <button id="galleryBtn" class="nav-gallery-btn">
-          Galeri <span id="galleryArrow">▼</span>
-        </button>
+
+        <!-- Galeri Button & Dropdown -->
+        <div style="position: relative; display: inline-block">
+          <button
+            id="galleryBtn"
+            class="nav-gallery-btn"
+            style="background: none; border: none; cursor: pointer"
+          >
+            Galeri <span id="galleryArrow">▼</span>
+          </button>
+          <div class="dropdown-menu-custom" id="galleryDropdown">
+            <a href="foto-salad.html">Foto Salad</a>
+            <a href="video-proses.html">Video Proses</a>
+          </div>
+        </div>
+
         <a href="about.html">Tentang Kami</a>
       </div>
     </nav>
-
-    <!-- Modal Dropdown Galeri -->
-    <div class="gallery-modal" id="galleryModal">
-      <div class="gallery-content">
-        <button class="close-btn" id="closeModal">&times;</button>
-        <div class="modal-links">
-          <div>
-            <h3>Foto Salad</h3>
-            <p>Koleksi gambar salad buah segar kami</p>
-          </div>
-          <div>
-            <h3>Video Proses</h3>
-            <p>Proses pembuatan dan penyajian</p>
-          </div>
-          <div>
-            <h3>Testimoni</h3>
-            <p>Ulasan dari pelanggan setia</p>
-          </div>
-          <div>
-            <h3>Kemasan</h3>
-            <p>Contoh kemasan salad premium</p>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <main>
       <!-- ============================

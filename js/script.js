@@ -3,38 +3,22 @@ document.addEventListener("DOMContentLoaded", function () {
      NAVIGASI DROPDOWN GALERI
   ========================= */
   const galleryBtn = document.getElementById("galleryBtn");
-  const galleryModal = document.getElementById("galleryModal");
-  const closeModal = document.getElementById("closeModal");
+  const galleryDropdown = document.getElementById("galleryDropdown");
   const galleryArrow = document.getElementById("galleryArrow");
 
-  if (galleryBtn && galleryModal && closeModal && galleryArrow) {
-    galleryBtn.addEventListener("click", () => {
-      const isOpen = galleryModal.style.display === "block";
-      galleryModal.style.display = isOpen ? "none" : "block";
-      galleryArrow.textContent = isOpen ? "▼" : "▲";
-    });
+  galleryBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const isOpen = galleryDropdown.style.display === "block";
+    galleryDropdown.style.display = isOpen ? "none" : "block";
+    galleryArrow.textContent = isOpen ? "▼" : "▲";
+  });
 
-    closeModal.addEventListener("click", () => {
-      galleryModal.style.display = "none";
+  window.addEventListener("click", (e) => {
+    if (!galleryBtn.contains(e.target) && !galleryDropdown.contains(e.target)) {
+      galleryDropdown.style.display = "none";
       galleryArrow.textContent = "▼";
-    });
-
-    window.addEventListener("click", (e) => {
-      if (
-        !galleryModal.contains(e.target) &&
-        e.target !== galleryBtn &&
-        !galleryBtn.contains(e.target)
-      ) {
-        galleryModal.style.display = "none";
-        galleryArrow.textContent = "▼";
-      }
-    });
-
-    window.addEventListener("scroll", () => {
-      galleryModal.style.display = "none";
-      galleryArrow.textContent = "▼";
-    });
-  }
+    }
+  });
 
   /* ========================
      SLIDER TESTIMONIAL INDEX
