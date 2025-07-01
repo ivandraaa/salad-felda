@@ -1410,3 +1410,83 @@ button[type="submit"]:hover,
 /* ========================================
    END: STYLE order.html
 ======================================== */
+
+/* ========================================
+   START: STYLE HALAMAN foto-salad.html
+======================================== */
+
+.gallery-salad-section {
+  padding: 2rem 2rem;
+  background-color: #ffffff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #098f36;
+  margin-bottom: 2rem;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery-card {
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: left;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.3rem;
+}
+
+.gallery-card h3 {
+  margin: 0.2rem 0 0.3rem;
+  font-size: 1.1rem;
+  color: #098f36;
+}
+
+.gallery-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.4rem;
+}
+
+.sold-count {
+  font-weight: 500;
+}
+
+.rating {
+  color: #ffaa00;
+  font-weight: 600;
+}
+
+.chef-recommendation {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* ========================================
+   END: STYLE HALAMAN foto-salad.html
+======================================== */
