@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salad Felda - Galeri</title>
+    <link rel="icon" href="images/logo.png" type="image/png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- ==============================
+         NAVIGASI UTAMA
+    ============================== -->
+    <nav>
+      <div class="nav-left">Salad Felda</div>
+      <div class="nav-right">
+        <a href="index.html">Beranda</a>
+        <a href="menu.html">Menu Salad</a>
+        <a href="order.html">Pesan Sekarang</a>
+
+        <!-- Dropdown Galeri -->
+        <div style="position: relative; display: inline-block">
+          <button
+            id="galleryBtn"
+            class="nav-gallery-btn"
+            style="background: none; border: none; cursor: pointer"
+          >
+            Galeri <span id="galleryArrow">▼</span>
+          </button>
+          <div class="dropdown-menu-custom" id="galleryDropdown">
+            <a href="foto-salad.html">Foto Salad</a>
+            <a href="video-proses.html">Video Proses</a>
+          </div>
+        </div>
+
+        <a href="about.html">Tentang Kami</a>
+      </div>
+    </nav>
+
+    <!-- ==============================
+         SECTION VIDEO PROSES SALAD
+    ============================== -->
+    <main>
+      <section class="video-section">
+        <div class="container">
+          <h2 class="section-title">Proses Pembuatan Salad Felda</h2>
+          <p class="video-description">
+            Saksikan bagaimana Salad Felda dibuat dengan bahan segar, proses
+            higienis, dan penuh cinta.
+          </p>
+
+          <div class="video-grid">
+            <!-- Kartu Video Lokal -->
+            <div class="video-card with-video">
+              <div class="video-wrapper">
+                <video controls autoplay muted loop playsinline>
+                  <source src="images/video_pembuatan.mp4" type="video/mp4" />
+                  Browser Anda tidak mendukung tag video.
+                </video>
+              </div>
+              <h3>Persiapan Bahan Segar</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==============================
+         FOOTER
+    ============================== -->
+    <footer class="footer-new">
+      <div class="footer-content">
+        <!-- Kiri -->
+        <div class="footer-left">
+          <h2>Salad Felda</h2>
+          <p>
+            Misi kami adalah menghadirkan makanan sehat dan menyegarkan untuk
+            semua kalangan.
+          </p>
+          <a
+            href="https://instagram.com/salad_felda"
+            target="_blank"
+            rel="noopener"
+          >
+            <img
+              src="images/index/footer-salad.jpg"
+              alt="Instagram"
+              class="footer-social"
+            />
+          </a>
+        </div>
+
+        <!-- Maps -->
+        <div class="footer-map">
+          <iframe
+            src="https://www.google.com/maps?q=-7.597700595855713,110.80908966064453&z=17&hl=id&output=embed"
+            width="100%"
+            height="150"
+            style="border: 0; margin-top: 1rem; border-radius: 8px"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <!-- Navigasi -->
+        <div class="footer-right">
+          <ul class="footer-nav">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="menu.html">Menu Salad</a></li>
+            <li><a href="order.html">Pesan Sekarang</a></li>
+            <li><a href="#" class="active">Galeri</a></li>
+            <li><a href="about.html">Tentang Kami</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 Salad Felda, Hak Cipta Dilindungi</p>
+        <div class="footer-legal">
+          <a href="#">Kebijakan Privasi</a>
+          <span>·</span>
+          <a href="#">Syarat & Ketentuan</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

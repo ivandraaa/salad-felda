@@ -1416,13 +1416,13 @@ button[type="submit"]:hover,
 ======================================== */
 
 .gallery-salad-section {
-  padding: 2rem 2rem;
-  background-color: #ffffff;
+  padding: 3rem 2rem;
+  background-color: #e6fbe8;
 }
 
 .section-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #098f36;
   margin-bottom: 2rem;
 }
@@ -1489,4 +1489,75 @@ button[type="submit"]:hover,
 
 /* ========================================
    END: STYLE HALAMAN foto-salad.html
+======================================== */
+
+/* ========================================
+   START: STYLE HALAMAN video-proses.html
+======================================== */
+.video-section {
+  padding: 3rem 2rem 2rem;
+  background-color: #e6fbe8;
+  text-align: center;
+}
+
+.video-section .section-title {
+  font-size: 2.5rem;
+  color: #098f36;
+  margin-bottom: 0.5rem;
+}
+
+.video-description {
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* === Kartu Video dengan Tag <video> === */
+.video-card.with-video {
+  padding: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  max-width: 600px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.video-card.with-video:hover {
+  transform: translateY(-5px);
+}
+
+.video-card .video-wrapper {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.video-card .video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+.video-card.with-video h3 {
+  margin-top: 0.5rem;
+  color: #098f36;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* ========================================
+   END: STYLE HALAMAN video-proses.html
 ======================================== */
