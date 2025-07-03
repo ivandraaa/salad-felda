@@ -11,7 +11,9 @@ body {
   font-family: "Segoe UI", sans-serif;
   background-color: #fff;
   color: #333;
+  overflow-x: hidden;
 }
+
 .logo-image {
   width: 5rem;
   height: 5rem;
@@ -20,7 +22,7 @@ body {
 }
 
 /* ========================================
-   ANIMASI (GENERAL)
+   ANIMASI
 ======================================== */
 @keyframes fadeIn {
   from {
@@ -34,25 +36,28 @@ body {
 }
 
 /* ========================================
-   CUSTOM SCROLLBAR (GENERAL)
+   CUSTOM SCROLLBAR
 ======================================== */
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: #f0fff4;
 }
+
 ::-webkit-scrollbar-thumb {
   background-color: #098f36;
   border-radius: 10px;
   border: 2px solid #f0fff4;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background-color: #066d2b;
 }
 
 /* ========================================
-   NAVIGASI (GENERAL)
+   NAVIGASI (DESKTOP & MOBILE)
 ======================================== */
 nav {
   background-color: #ffffff;
@@ -64,6 +69,7 @@ nav {
   position: sticky;
   top: 0;
   z-index: 100;
+  flex-wrap: wrap;
 }
 
 .nav-left {
@@ -74,8 +80,9 @@ nav {
 
 .nav-right {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .nav-right a,
@@ -87,7 +94,7 @@ nav {
   font-weight: 500;
   color: #1d1e20;
   cursor: pointer;
-  padding: 0;
+  padding: 0.5rem 0;
   font-family: inherit;
   transition: color 0.2s;
   display: inline-flex;
@@ -104,6 +111,7 @@ nav {
   color: #098f36;
   position: relative;
 }
+
 .nav-right a.active::after {
   content: "";
   position: absolute;
@@ -125,17 +133,22 @@ nav {
 /* ========================================
    MODAL DROPDOWN GALERI (GENERAL)
 ======================================== */
+.dropdown-wrapper {
+  position: relative; /* bungkus tombol dan dropdown */
+}
+
 .dropdown-menu-custom {
   display: none;
   position: absolute;
   top: 130%;
   left: 0;
-  transform: translateX(-50%);
+  transform: translateX(0);
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   padding: 10px 0;
   min-width: 200px;
+  max-width: 90vw;
   z-index: 999;
 }
 
@@ -150,6 +163,38 @@ nav {
 
 .dropdown-menu-custom a:hover {
   background-color: #e6fbe8;
+}
+
+/* Responsif: Dropdown jadi vertikal dan sejajar kiri */
+@media (max-width: 768px) {
+  .dropdown-menu-custom {
+    position: static;
+    transform: none;
+    width: 100%;
+    box-shadow: none;
+    padding-left: 0;
+    margin-left: 1rem; /* biar tetap agak masuk */
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-right {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .nav-right a,
+  .nav-right button.nav-gallery-btn {
+    width: 100%;
+    text-align: left;
+  }
+
+  .dropdown-wrapper {
+    width: 100%;
+  }
 }
 
 /* ========================================
